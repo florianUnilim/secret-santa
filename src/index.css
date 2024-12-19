@@ -8,6 +8,7 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
+
 @layer base {
   *,
   ::after,
@@ -15,5 +16,28 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+    
+
   }
+:root {
+  --button-bg-color: #B22222; 
+  --button-text-color: #F8F8FF; 
+  --button-border-radius: 50px; 
+  --button-padding: 10px 20px; 
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  border: none; 
+  cursor: pointer; 
+  transition: transform 0.3s ease-in-out;
+}
+
+button:active {
+  background-color: darken(var(--button-bg-color), 30%);
+  transform: translateY(-5px) rotate(-5deg);
+}
 }
