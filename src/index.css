@@ -34,6 +34,8 @@ button {
   border: none; 
   cursor: pointer; 
   transition: transform 0.3s ease-in-out;
+  font-family: var(--font-base);
+  font-size: x-large;
 }
 
 button:active {
@@ -41,3 +43,17 @@ button:active {
   transform: translateY(-5px) rotate(-5deg);
 }
 }
+
+
+@font-face {
+  font-family: 'CHRISTMASCOMEBACK';
+  src : url('/fonts/CHRISTMASCOMEBACK.otf') format('opentype');
+  font-style:  normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme{
+  --font-base: 'CHRISTMASCOMEBACK', sans-serif;
+}
+

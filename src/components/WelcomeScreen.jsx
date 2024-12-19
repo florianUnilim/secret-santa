@@ -11,10 +11,10 @@ export function WelcomeScreen({ onStart }) {
     }, 500); // Correspond à la durée de l'animation
   };
   return (
-    <div className="flex flex-col relative text-center space-y-6 items-center justify-center h-screen z-50 bg-gradient-to-l from-red-500 to-red-700">
+    <div className="flex flex-col relative text-center items-center justify-center h-screen z-50 bg-gradient-to-l from-red-500 to-red-700">
        <Snowfall />
       <div className="bg-white p-8 rounded-lg shadow-lg m-3">
-        <h1 className="text-5xl font-bold text-primary mb-4">Secret Santa</h1>
+        <h1 className="text-5xl font-bold text-primary mb-4 font-base">Secret Santa</h1>
         <p className="text-lg mb-6">Organisez facilement votre échange de cadeaux entre amis ou collègues.</p>
         <button 
           onClick={handleClick}  

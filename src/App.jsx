@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Snowfall from 'react-snowfall';
 import { WelcomeScreen } from "./components/WelcomeScreen";
 import { ParticipantInput } from "./components/ParticipantInput";
 import { AssignmentDisplay } from "./components/AssignmentDisplay";
@@ -24,8 +25,8 @@ export default function App() {
   // Fonction pour distribuer les cadeaux
   const distributeGifts = () => {
     // S'il n'y a pas assez de participants, on affiche une alerte
-    if (participants.length < 2) {
-      alert("Il faut au moins 2 participants pour faire un Secret Santa !");
+    if (participants.length < 3) {
+      alert("Il faut au moins 3 participants pour faire un Secret Santa !");
       return;
     }
 
@@ -51,13 +52,14 @@ export default function App() {
   };
 
   return (
-    <div className="container mx-auto">
-      <div>
+    <div className="container mx-auto bg-gradient-to-l from-red-500 to-red-700 h-screen flex items-center justify-center">
+      <Snowfall />
+      <div className="w-full max-w-md">
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
         )}
         {currentScreen === "input" && (
-          <>
+          <div className="flex flex-col bg-white p-8 rounded-lg shadow-lg mx-3 ">
             <h2 className="text-2xl font-bold mb-6 text-center">
               Ajoutez les participants
             </h2>
@@ -71,7 +73,7 @@ export default function App() {
                 Distribuer les cadeaux
               </button>
             </div>
-          </>
+          </div>
         )}
         {currentScreen === "assignments" && (
           <>

@@ -23,11 +23,11 @@ export function ParticipantInput({
   };
 
   return (
-    <div className="space-y-4">
+    <div className="">
       <div className="flex space-x-2">
         <input
           type="text"
-          className="input flex-grow"
+        className="input flex-grow border-[#B22222] border-2 rounded-full bg-white pl-2 pr-2 "
           placeholder="Entrez un nom"
           value={currentName}
           onChange={(e) => setCurrentName(e.target.value)}
@@ -43,7 +43,7 @@ export function ParticipantInput({
             {name}
             <div className="space-x-2">
               <button
-                className="text-red-500 hover:text-red-700"
+                className="text-black-500 hover:text-red-700"
                 onClick={() => onRemoveParticipant(index)}
               >
                 Supprimer
