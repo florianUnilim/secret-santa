@@ -52,15 +52,17 @@ export default function App() {
   };
 
   return (
-    <div className="container mx-auto bg-gradient-to-l from-red-500 to-red-700 h-screen flex items-center justify-center">
-      <Snowfall />
+    
+    <div className="container mx-auto bg-gradient-to-l from-red-500 to-red-700 h-screen flex flex-col items-center justify-center">
+      
       <div className="w-full max-w-md">
+        
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
         )}
         {currentScreen === "input" && (
           <div className="flex flex-col bg-white p-8 rounded-lg shadow-lg mx-3 ">
-            <h2 className="text-2xl font-bold mb-6 text-center">
+            <h2 className="text-2xl font-bold mb-6 text-center font-base">
               Ajoutez les participants
             </h2>
             <ParticipantInput
@@ -72,11 +74,13 @@ export default function App() {
               <button className="button w-full" onClick={distributeGifts}>
                 Distribuer les cadeaux
               </button>
+              <Snowfall />
             </div>
           </div>
         )}
         {currentScreen === "assignments" && (
-          <>
+          <div className="flex flex-col bg-white p-8 rounded-lg shadow-lg mx-3 font-base">
+            <Snowfall />
             <h2 className="text-2xl font-bold mb-6 text-center">
               Attributions des cadeaux
             </h2>
@@ -85,8 +89,9 @@ export default function App() {
               <button className="button w-full" onClick={resetApp}>
                 Recommencer
               </button>
+              <img src="./perenoel.png" alt="pere noel" className="absolute bottom-0 z-10 w-4/5"/>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>

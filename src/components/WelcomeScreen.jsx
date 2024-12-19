@@ -15,7 +15,7 @@ export function WelcomeScreen({ onStart }) {
        <Snowfall />
       <div className="bg-white p-8 rounded-lg shadow-lg m-3">
         <h1 className="text-5xl font-bold text-primary mb-4 font-base">Secret Santa</h1>
-        <p className="text-lg mb-6">Organisez facilement votre échange de cadeaux entre amis ou collègues.</p>
+        <p className="text-lg mb-6 font-secondary">Organisez facilement votre échange de cadeaux entre amis ou collègues.</p>
         <button 
           onClick={handleClick}  
           className="bg-red-500 text-white text-lg px-8 py-3 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 active:scale-95"

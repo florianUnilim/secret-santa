@@ -39,15 +39,15 @@ export function ParticipantInput({
       </div>
       <ul className="space-y-2">
         {participants.map((name, index) => (
-          <li key={index} className="list-item">
+          <li key={index} className=" flex font-secondary text-2xl p-2 gap-2">
             {name}
-            <div className="space-x-2">
-              <button
+            <div className="space-x-2 ">
+              <a
                 className="text-black-500 hover:text-red-700"
                 onClick={() => onRemoveParticipant(index)}
               >
                 Supprimer
-              </button>
+              </a>
             </div>
           </li>
         ))}

@@ -45,9 +45,19 @@ button:active {
 }
 
 
+
+
 @font-face {
   font-family: 'CHRISTMASCOMEBACK';
   src : url('/fonts/CHRISTMASCOMEBACK.otf') format('opentype');
+  font-style:  normal;
+  font-weight: 100 900;
+  font-display: swap;
+  
+}
+@font-face {
+  font-family: 'gontserrat';
+  src : url('/fonts/gontserrat-Medium.ttf') format('Truetype');
   font-style:  normal;
   font-weight: 100 900;
   font-display: swap;
@@ -55,5 +65,6 @@ button:active {
 
 @theme{
   --font-base: 'CHRISTMASCOMEBACK', sans-serif;
+  --font-secondary: 'gontserrat', sans-serif;
 }
 
